@@ -34,4 +34,12 @@ RSpec.describe Dog do
       expect(dog.bark).to eq("Woof!")
     end
   end
+
+  context '#summary' do
+    it 'returns a summary' do
+      dog = Dog.new("Fido", 2, "Dalmation")
+
+      expect(dog.summary).to eq("Name: Fido\nAge: 2\nBreed: Dalmation")
+    end
+  end
 end
